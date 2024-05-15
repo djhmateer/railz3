@@ -68,3 +68,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# gem "spina", "~> 2.5"
+gem 'spina', '~> 2.18'
