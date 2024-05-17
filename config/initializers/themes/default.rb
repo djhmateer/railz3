@@ -21,7 +21,14 @@ Spina::Theme.register do |theme|
   # - Option
   # - Repeater
   theme.parts = [
-    {name: "text", title: "Body", hint: "Your main content", part_type: "Spina::Parts::Text"}
+    {name: "text", title: "Text", hint: "Your main content", part_type: "Spina::Parts::Text"},
+    {name: "title", title: "Title", hint: "Title", part_type: "Spina::Parts::Line"},
+    {name: "summary", title: "Summary", hint: "A summary for your page", part_type: "Spina::Parts::Line"},
+    {name: "image", title: "Image", hint: "An image", part_type: "Spina::Parts::Image"},
+    {name: "link", title: "Link", hint: "A URL", part_type: "Spina::Parts::Line"},
+    {name: "linktext", title: "LinkText", hint: "link text", part_type: "Spina::Parts::Line"},
+    {name: "problem", title: "Problem", part_type: "Spina::Parts::Repeater", parts: %w[title text image link linktext]},
+    {name: "empathy", title: "Empathy", part_type: "Spina::Parts::Repeater", parts: %w[title text image link linktext]},
   ]
 
   # View templates
@@ -30,7 +37,8 @@ Spina::Theme.register do |theme|
   # by referencing them from the theme.parts configuration above.
   theme.view_templates = [
     {name: "homepage", title: "Homepage", parts: %w[text]},
-    {name: "show", title: "Page", parts: %w[text]}
+    {name: "show", title: "Page", parts: %w[summary text image link linktext]},
+    {name: "sales", title: "Sales", parts: %w[summary text image link linktext problem empathy]}
   ]
 
   # Custom pages

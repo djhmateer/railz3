@@ -71,3 +71,5 @@ end
 
 # gem "spina", "~> 2.5"
 gem 'spina', '~> 2.18'
+
+gem "devise", "~> 4.9"
