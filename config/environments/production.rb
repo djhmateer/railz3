@@ -85,7 +85,7 @@ config.logger = ActiveSupport::Logger.new("log/production.log")
     
     # DM test .env fils is being loaded in prod
     # this will be in log/production.log
-    Rails.logger.info "Environment variable SMTP_ADDRESS: #{ENV['SMTP_ADDRESS']}"
+    # Rails.logger.info "Environment variable SMTP_ADDRESS: #{ENV['SMTP_ADDRESS']}"
 
     # DM added this so that even in dev it will send an email
     config.action_mailer.smtp_settings = {
