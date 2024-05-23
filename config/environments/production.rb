@@ -81,7 +81,7 @@ config.logger = ActiveSupport::Logger.new("log/production.log")
     config.action_mailer.raise_delivery_errors = true
 
     # DM this is the route that the email will use
-    config.action_mailer.default_url_options = { host: 'hmsoftware.uk' }
+    config.action_mailer.default_url_options = { host: 'hmsoftware.uk', protocol: 'https'}
     
     # DM added this so that even in dev it will send an email
     config.action_mailer.smtp_settings = {
