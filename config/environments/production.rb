@@ -83,6 +83,10 @@ config.logger = ActiveSupport::Logger.new("log/production.log")
     # DM this is the route that the email will use
     config.action_mailer.default_url_options = { host: 'hmsoftware.uk', protocol: 'https'}
     
+    # DM test .env fils is being loaded in prod
+    # this will be in log/production.log
+    Rails.logger.info "Environment variable SMTP_ADDRESS: #{ENV['SMTP_ADDRESS']}"
+
     # DM added this so that even in dev it will send an email
     config.action_mailer.smtp_settings = {
       address: ENV['SMTP_ADDRESS'],
