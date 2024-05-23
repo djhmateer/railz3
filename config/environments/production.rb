@@ -74,7 +74,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "railz3_production"
 
     # DM I do care if the mailer fails
-    config.action_mailer.raise_delivery_errors = false
+    config.action_mailer.raise_delivery_errors = true
 
     # DM this is the route that the email will use
     config.action_mailer.default_url_options = { host: 'hmsoftware.uk' }
