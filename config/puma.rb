@@ -39,4 +39,4 @@ plugin :tmp_restart
 stdout_redirect 'log/puma.stdout.log', 'log/puma.stderr.log', true
 
 # You might also want to set the log level
-log_level :info
+# log_level :info
