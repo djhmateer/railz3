@@ -1,0 +1,23 @@
+<div id="<%= dom_id communication %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= communication.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Image:</strong>
+    <%= link_to communication.image.filename, communication.image if communication.image.attached? %>
+  </p>
+
+<!-- DM -->
+  <p>
+  <strong>Image:</strong>
+  <!-- notice safe navigation operator &. -->
+  <% if @communication&.image&.attached? %>
+    <%= image_tag url_for(@communication.image) %>
+  <% else %>
+    <!-- maybe on /communications screen and don't want all image previews -->
+  <% end %>
+</p>
+
+</div>

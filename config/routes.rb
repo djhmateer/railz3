@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # added by scaffold
+  resources :communications
+  
   devise_for :users,
     path: '',
     path_names: {
