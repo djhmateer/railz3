@@ -73,3 +73,7 @@ end
 gem 'spina', '~> 2.18'
 
 gem "devise", "~> 4.9"
+
+# gem "azure-storage-blob", "~> 2.0", require: false
+gem 'azure-storage-blob', '~> 2.0', '>= 2.0.3'
+

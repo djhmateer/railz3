@@ -33,8 +33,13 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # DM
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+  # config.active_storage.service = :local
+  config.active_storage.service = :microsoft
+
+
+
 
   config.action_mailer.perform_caching = false
 
