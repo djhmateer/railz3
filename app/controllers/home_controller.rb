@@ -23,4 +23,7 @@ class HomeController < ApplicationController
 
   def secret
   end
+
+  def upload
+  end
 end
