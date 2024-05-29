@@ -15,6 +15,11 @@
   <!-- notice safe navigation operator &. -->
   <% if @communication&.image&.attached? %>
     <%= image_tag url_for(@communication.image) %>
+
+    <br>
+    download: 
+       <%= link_to @communication.image.filename.to_s, rails_blob_path(@communication.image, disposition: "attachment") %>
+
   <% else %>
     <!-- maybe on /communications screen and don't want all image previews -->
   <% end %>
