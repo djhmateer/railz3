@@ -9,3 +9,7 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 # pin "activestorage" # @5.2.8
 pin "@rails/activestorage", to: "activestorage.esm.js"
 
+pin "direct_uploads", to: "direct_uploads.js"
+
+
+
