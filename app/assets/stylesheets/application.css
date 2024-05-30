@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+
+ /* dm added for direct-upload test */
+ .direct-upload {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .direct-upload__progress {
+    flex: 1;
+    height: 5px;
+    background-color: lightgray;
+    margin-right: 10px;
+  }
+  
+  .direct-upload__filename {
+    flex: 2;
+  }
+  
+  .direct-upload--pending .direct-upload__progress {
+    background-color: lightblue;
+  }
+  
+  .direct-upload--error .direct-upload__progress {
+    background-color: red;
+  }
+  
+  .direct-upload--complete .direct-upload__progress {
+    background-color: green;
+  }
