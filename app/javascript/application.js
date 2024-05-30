@@ -5,5 +5,5 @@ import "controllers"
 import * as ActiveStorage from "@rails/activestorage"
 ActiveStorage.start()
 
-import "./direct_uploads"
+import "./direct_uploads.js"
 
